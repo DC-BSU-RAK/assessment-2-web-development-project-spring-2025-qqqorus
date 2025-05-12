@@ -4,6 +4,11 @@
     cursor: default;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .signup-container {
     display: flex;
     height: max-content;
@@ -12,15 +17,61 @@
     padding: 0;
     margin: auto;
     width: 100%;
+        
+    h1 {
+        font-size: 3.5em;
+    }
 
     .sign-up {
-        height: 90vh;
+        height: 100vh;
         width: 50%;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fcefdc;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            width: 400px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            border-radius: 30px;
+
+            &:hover {
+              cursor: text;  
+            }
+        }
+
+        button {
+            width: 200px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 10px;
+
+            &:hover {
+              cursor: pointer;  
+            }
+        }
     }
 
     .log-in-redirect {
-        background-color: #aaa;
-        height: 90vh;
+        background-color: #2ca1c8;
+        height: 100vh;
         width: 50%;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+            font-size: 1.5em;
+        }
     }
 }
