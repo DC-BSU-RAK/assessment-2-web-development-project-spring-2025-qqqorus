@@ -1,0 +1,26 @@
+* {
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.signup-container {
+    display: flex;
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    width: 100%;
+
+    .sign-up {
+        height: 90vh;
+        width: 50%;
+    }
+
+    .log-in-redirect {
+        background-color: #aaa;
+        height: 90vh;
+        width: 50%;
+    }
+}
