@@ -1,0 +1,53 @@
+* {
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+
+    h1 {
+        text-align: center;
+        font-family: 'Lexend Exa';
+        color: #363555;
+        font-size: 3em;
+        border-radius: 60px;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid #363555;
+    }
+}
+
+header {
+    background-color: #000;
+    border-radius: 30px;
+    padding: 30px;
+    display: inline-block;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+li a {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+
+    &.active {
+        color: pink;
+    }
+    
+    &:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+}
