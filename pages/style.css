@@ -21,16 +21,16 @@ body {
     padding: 10px;
 }
 
-header {
+.sidebar-container {
     background-color: #000;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
     border-radius: 30px;
     padding: 35px;
     margin: 0;
-    display: inline-block;
+    width: max-content;
     height: 94vh;
-}
-
-.header-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -41,7 +41,6 @@ header {
         display: block;
         margin: 0px auto;
     }
-
 }
 
 h1 {
@@ -73,11 +72,11 @@ div {
     text-decoration: none;
     display: inline-block;
     
-    &:hover:not(.selected) {
-        color: #999;
-        cursor: pointer;
+        &:hover:not(.selected) {
+            color: #999;
+            cursor: pointer;
+        }
     }
-}
 }
 
 .selected {
