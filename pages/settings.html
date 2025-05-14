@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinguaQuest: Settings</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/stylesheets/maincontent.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
@@ -36,20 +36,26 @@
         <h1>Settings</h1>
         <div>
             <h2>Gameplay Preferences</h2>
-            <small>&emsp;Difficulty Mode</small><br>
-                <div class="setting-cat">
-                    <p>Casual&ensp;</p>
-                        <input type="checkbox" checked>&emsp;&emsp;
-                    <p>Hardcore&ensp;</p>
-                        <input type="checkbox">
-                </div><br><br>
-            <small>&emsp;Quest Notifications</small><br>
-                <div>
-                    <p>Daily Reminders&ensp;</p>
-                        <input type="checkbox" checked>&emsp;&emsp;
-                    <p>Email Notifications&ensp;</p>
-                        <input type="checkbox" checked>
-                </div><br><br>
+            <div id="first-row">
+                <div id="difficulty">
+                    <small>&emsp;Difficulty Mode</small><br>
+                        <div class="setting-cat">
+                            <label for="casual"><p>Casual&ensp;</p></label>
+                            <input type="radio" id="casual" name="difficulty" checked>&emsp;&emsp;
+                            <label for="hardcore"><p>Hardcore&ensp;</p></label>
+                            <input type="radio" id="hardcore" name="difficulty">
+                        </div><br><br>
+                </div>
+                <div id="quest">
+                    <small>&emsp;Quest Notifications</small><br>
+                        <div>
+                            <p>Daily Reminders&ensp;</p>
+                                <input type="checkbox" checked>&emsp;&emsp;
+                            <p>Email Notifications&ensp;</p>
+                                <input type="checkbox" checked>
+                        </div><br><br>
+                </div>
+            </div>
             <small>&emsp;Sound & Music</small><br>
                 <div>
                     <p>Victory Jingles&ensp;</p>
