@@ -33,7 +33,80 @@
     </div>
 
     <main class="settings-main">
-
+        <h1>Settings</h1>
+        <div>
+            <h2>Gameplay Preferences</h2>
+            <small>&emsp;Difficulty Mode</small><br>
+                <div class="setting-cat">
+                    <p>Casual&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Hardcore&ensp;</p>
+                        <input type="checkbox">
+                </div><br><br>
+            <small>&emsp;Quest Notifications</small><br>
+                <div>
+                    <p>Daily Reminders&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Email Notifications&ensp;</p>
+                        <input type="checkbox" checked>
+                </div><br><br>
+            <small>&emsp;Sound & Music</small><br>
+                <div>
+                    <p>Victory Jingles&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Keyboard SFX&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Background Music&ensp;</p>
+                        <input type="checkbox" checked>
+                </div><br><br>
+            <small>&emsp;Theme</small><br>
+                <div>
+                    <p>Site Theme:&ensp;</p>
+                    <select>
+                        <option value="Light Mode" selected>Light Mode</option>
+                        <option value="Dark Mode">Dark Mode</option>
+                    </select>&emsp;&emsp;
+                    <p>Language:&ensp;</p>
+                    <select>
+                        <option value="English" selected>English</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="German">German</option>
+                        <option value="Filipino">Filipino</option>
+                        <option value="French">French</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Russian">Russian</option>
+                    </select>&emsp;&emsp;
+                    <p>Timezone:&ensp;</p>
+                    <select>
+                        <option value="UTC+1" selected>UTC+1/GMT+1</option>
+                        <option value="UTC+8">UTC+8/GMT+8</option>
+                        <option value="UTC+3">UTC+3/GMT+3</option>
+                    </select>
+                </div>
+        </div>
+            <hr>
+        <div>
+            <h2>Social & Safety</h2>
+            <small>&emsp;Chat Controls</small><br>
+                <div class="setting-cat">
+                    <p>Voice Chat&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Mute Chat&ensp;</p>
+                        <input type="checkbox">&emsp;&emsp;
+                    <p>Block Players:&ensp;</p>
+                        <input type="text" placeholder="Enter user ID">
+                        <button type="submit">Submit</button>
+                </div>
+        </div>
+            <hr>
+        <div>
+            <h2>Data & Security</h2>
+            <small>&emsp;Delete Account</small><br>
+                <div>
+                    <p>This will erase your Level and Status FOREVER. Are you sure?&ensp;</p>
+                    <button type="submit" id="delete">Delete Account</button>
+                </div>
+        </div>
     </main>
 </body>
 </html>
