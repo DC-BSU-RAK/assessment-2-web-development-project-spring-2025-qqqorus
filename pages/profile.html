@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinguaQuest: Your Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/stylesheets/maincontent.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
@@ -33,7 +33,65 @@
     </div>
 
     <main class="profile-main">
-
+        <div id="profile-header">
+            <h1 id="your">Your</h1><h1 id="profile">Profile</h1>
+        </div>
+        <section id="profile-group">
+            <div class="section-divs">
+                <div class="profile-picture">
+                    <div class="">
+                        <img src="/images/avatar.png" height="100" width="100">
+                        <h2>@user0123<br><span class="title">Novice Nomad</span></h2>
+                        <div class="xp-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                            <span>Level 3 (650/1000 XP)</span>
+                        </div>
+                    </div>
+                        <button>Upload New</button>
+                        <button id="delete">Delete Avatar</button>
+                        <button id="premium"><i class="fa-solid fa-star"></i>&ensp;Change Avatar Theme</button>
+                </div>
+                <section>
+                    <div>
+                        <div class="profile-details">
+                            <small>Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</small><p>User123</p>
+                        </div>
+                            <hr>
+                        <div class="profile-details">
+                            <small>Email&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</small><p>user@linguaquest.com</p>
+                        </div>
+                            <hr>
+                        <div class="profile-details">
+                            <small>Gender&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</small>
+                            <label for="female"><p>Female&ensp;</p></label>
+                            <input type="radio" id="female" name="gender">&emsp;&emsp;
+                            <label for="male"><p>Male&ensp;</p></label>
+                            <input type="radio" id="male" name="gender">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="section-divs">
+                <h2>Progress Dashboard</h2>
+                <div class="progress">
+                    <div>
+                        <div class="profile-section">
+                        <div class="badges-grid">
+                            <div class="badge" data-tooltip="7-Day Streak: Unlocked Jan 5">
+                            <img src="streak-badge.png" alt="Streak Badge">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Badges & Achievements</h2>
+                <div class="badges">
+                    <img src="/images/pfp.png" alt="">
+                    <img src="" alt="">
+                </div>
+                <div></div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
