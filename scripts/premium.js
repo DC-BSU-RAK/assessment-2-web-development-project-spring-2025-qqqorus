@@ -1,3 +1,27 @@
+// for the confettis on the premium page
+document.addEventListener('DOMContentLoaded', function() {
+    const upgrades = document.getElementsByClassName('upgradeButton');
+
+    // Confetti function
+    function fireConfetti() {
+        if (typeof confetti === 'function') {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        } else {
+            console.warn("Confetti library not loaded");
+        }
+    }
+
+    Array.from(upgrades).forEach(button => {
+        button.addEventListener('click', fireConfetti);
+    });
+});
+
+////////////////
+
 // for the page click audios
 
 function clickDashboard() {
