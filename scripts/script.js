@@ -77,3 +77,37 @@ function closeVideo() {
   document.getElementById('videoPopup').style.display = 'none';
   document.querySelector('#videoPopup video').pause();
 }
+
+////////////////////
+
+// function to play audio before redirecting to another page
+function clickLogin() {
+  const audio = new Audio('/audios/index-click.mp3');
+  audio.play()
+    .then(() => {
+      // Redirect after the audio starts playing
+      setTimeout(() => {
+        window.location.href = '/pages/login.html';
+      }, 500); // Short delay
+    })
+    .catch(error => {
+      console.error("Audio playback failed:", error);
+      window.location.href = 'index.html';
+    });
+}
+
+function clickRegister() {
+  const audio = new Audio('/audios/index-click.mp3');
+  audio.play()
+    .then(() => {
+      // Redirect after the audio starts playing
+      setTimeout(() => {
+        window.location.href = '/pages/register.html';
+      }, 500); // Short delay
+    })
+    .catch(error => {
+      console.error("Audio playback failed:", error);
+      window.location.href = 'index.html';
+    });
+}
+

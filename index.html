@@ -31,8 +31,8 @@
                 <option value="es">Español</option>
                 <option value="th">ไทย</option>
             </select>
-            <button id="login"><a href="pages/login.html">Log In</a></button>
-            <button id="register"><a href="pages/register.html">Register</a></button>    
+            <button id="login" onclick="clickLogin()">Log In</button>
+            <button id="register" onclick="clickRegister()">Register</button>    
         </nav>
     </header>
 
@@ -60,7 +60,6 @@
                 Earn XP, unlock rewards, and compete with friends while progressing from beginner to fluent. 
                 No textbooks—just playful immersion with AI chatbots, virtual worlds, and real-world challenges.</p>
             <button id="conquest">Start your conquest!</button> 
-            <!-- add animation on click (like confetti) -->
         </div>
         <div class="image-desc">
             <img src="images/hero-img.png" id="hero-img">
@@ -211,7 +210,7 @@
         <div class="questions-container">
             <details>
                 <summary>How do I earn XP and level up?</summary>
-                <div class="questions-det">
+                <div class="questions-details">
                     <p>XP (Experience Points) are earned by completing lessons, winning duels, 
                     and finishing Daily Quests! Leveling up unlocks new avatars, bonus content 
                     (like slang dictionaries), and exclusive challenges. <br><br>
@@ -256,7 +255,8 @@
         <div id="form-area">
             <form>
                 <input type="email" placeholder="Enter Your Email"><br>
-                <button type="submit" id="subscribeButton">Subscribe</button>
+                <button type="submit" id="subscribeButton" onclick="document.getElementById('confetti').play()">Subscribe</button>
+                <audio src="/audios/confetti.mp3" id="confetti"></audio>
             </form>
         </div>
         <div id="subscriptionSuccessPopup" class="popup">
