@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinguaQuest: Your Profile</title>
-    <link rel="stylesheet" href="/stylesheets/maincontent.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
@@ -17,17 +17,17 @@
         <br>
         <p>General</p>
         <div>
-            <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
-            <a href="lessons.html"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
-            <a href="notifications.html"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
-            <a href="pvparea.html"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickDashboard()"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a onclick="clickNotifications()"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a onclick="clickPvpArea()"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
             <a class="selected blue"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
         </div>
         <br>
         <p>Tools</p>
         <div>
-            <a href="settings.html"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
-            <a href="premium.html" class="premium"><i class="fa-solid fa-star"></i>&emsp;Premium</a><br>
+            <a onclick="clickSettings()"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a onclick="clickPremium()" class="premium"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
             <a onclick="if(confirm('Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
         </div>
     </div>
@@ -36,62 +36,106 @@
         <div id="profile-header">
             <h1 id="your">Your</h1><h1 id="profile">Profile</h1>
         </div>
-        <section id="profile-group">
-            <div class="section-divs">
-                <div class="profile-picture">
-                    <div class="">
-                        <img src="/images/avatar.png" height="100" width="100">
+        
+        <div class="profile-columns">
+            <!-- Left Column - User Info -->
+            <div class="profile-column user-info">
+                <div class="avatar-section">
+                    <div class="avatar-container">
+                        <img src="/images/default_avatar1.png" alt="Profile Picture">
                         <h2>@user0123<br><span class="title">Novice Nomad</span></h2>
-                        <div class="xp-bar">
-                            <div class="progress" style="width: 65%;"></div>
-                            <span>Level 3 (650/1000 XP)</span>
-                        </div>
                     </div>
-                        <button>Upload New</button>
-                        <button id="delete">Delete Avatar</button>
-                        <button id="premium"><i class="fa-solid fa-star"></i>&ensp;Change Avatar Theme</button>
+                    <div class="xp-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                        <span>Level 3 (650/1000 XP)</span>
+                    </div>
+                    <div class="avatar-actions">
+                        <button class="upload-btn">Upload New</button>
+                        <button class="delete-btn">Delete Avatar</button>
+                        <button class="premium-btn"><i class="fas fa-crown"></i>&ensp;Change Avatar Theme</button>
+                    </div>
                 </div>
-                <section>
-                    <div>
-                        <div class="profile-details">
-                            <small>Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</small><p>User123</p>
-                        </div>
-                            <hr>
-                        <div class="profile-details">
-                            <small>Email&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</small><p>user@linguaquest.com</p>
-                        </div>
-                            <hr>
-                        <div class="profile-details">
-                            <small>Gender&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</small>
-                            <label for="female"><p>Female&ensp;</p></label>
-                            <input type="radio" id="female" name="gender">&emsp;&emsp;
-                            <label for="male"><p>Male&ensp;</p></label>
-                            <input type="radio" id="male" name="gender">
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <small>Name</small>
+                        <p>User123</p>
+                    </div>
+                    <hr>
+                    <div class="detail-item">
+                        <small>Email</small>
+                        <p>user@linguaquest.com</p>
+                    </div>
+                    <hr>
+                    <div class="detail-item">
+                        <small>Gender</small>
+                        <div class="gender-options">
+                            <label>
+                                <input type="radio" name="gender" id="female">
+                                <span>Female</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" id="male">
+                                <span>Male</span>
+                            </label>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-            <div class="section-divs">
-                <h2>Progress Dashboard</h2>
-                <div class="progress">
-                    <div>
-                        <div class="profile-section">
-                        <div class="badges-grid">
-                            <div class="badge" data-tooltip="7-Day Streak: Unlocked Jan 5">
-                            <img src="streak-badge.png" alt="Streak Badge">
+            
+            <!-- Right Column - Badges & Achievements -->
+            <div class="profile-column achievements">
+                <div class="achievement-section">
+                    <h2><i class="fas fa-fire"></i> Current Streak</h2>
+                    <div class="streak-display">
+                        <div class="flame-badge">
+                            <img src="/images/streak-badge.png" alt="7 Day Streak">
+                            <span>7 Days</span>
+                        </div>
+                        <p>Keep it up! 3 more days for a bonus!</p>
+                    </div>
+                </div>
+                
+                <div class="achievement-section">
+                    <h2><i class="fas fa-trophy"></i> Badges & Achievements</h2>
+                    <div class="badges-grid">
+                        <div class="badge" data-tooltip="First Lesson Completed">
+                            <img src="/images/badge1.png" alt="First Lesson">
+                        </div>
+                        <div class="badge" data-tooltip="5 Day Streak">
+                            <img src="/images/badge2.png" alt="5 Day Streak">
+                        </div>
+                        <div class="badge" data-tooltip="Vocabulary Master">
+                            <img src="/images/badge3.png" alt="Vocabulary Master">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievement-section">
+                    <h2><i class="fas fa-medal"></i> Recent Achievements</h2>
+                    <div class="achievements-list">
+                        <div class="achievement">
+                            <img src="/images/achievement1.png" alt="Fast Learner">
+                            <div>
+                                <h3>Fast Learner</h3>
+                                <p>Completed 5 lessons in one day</p>
+                                <small>Earned: Today</small>
                             </div>
                         </div>
+                        <div class="achievement">
+                            <img src="/images/achievement2.png" alt="Polyglot">
+                            <div>
+                                <h3>Polyglot</h3>
+                                <p>Learned 50 words in Spanish</p>
+                                <small>Earned: 2 days ago</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <h2>Badges & Achievements</h2>
-                <div class="badges">
-                    <img src="/images/pfp.png" alt="">
-                    <img src="" alt="">
-                </div>
-                <div></div>
             </div>
-        </section>
+        </div>
     </main>
+    
+    <script src="/scripts/maincontent.js"></script>
 </body>
 </html>
