@@ -131,7 +131,7 @@ div {
     margin-left: 17%;
     height: 94vh;
     padding: 30px;
-    background: linear-gradient(-45deg, #2ca1c8ab 0%, #ffffffab 50%, #2ca1c8ab 100%);
+    background: radial-gradient(#ffffffab 0%, #ffffffab 50%, #2ca1c8ab 100%);
     border-radius: 30px;
     overflow-y: auto;
 
@@ -162,22 +162,24 @@ div {
 .profile-columns {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: radial-gradient(#ffffff8e 0%, #ffffffab 50%, #aeebff 75%, #2ca1c8 100%);
 }
 
 .profile-column {
     flex: 1;
-    background: #ffffffab;
-    border-radius: 20px;
     padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .user-info {
     max-width: 400px;
+    display: block;
+    margin: auto;
 }
 
 .avatar-section {
@@ -270,7 +272,7 @@ div {
 
 .premium-btn {
     background: linear-gradient(90deg, #ffb62c, #fe881e, #ffb62c);
-    color: #9452ff;
+    color: #fff;
 }
 
 .premium-btn:hover {
@@ -315,7 +317,7 @@ div {
 hr {
     border: none;
     height: 1px;
-    background: #eee;
+    background: #999;
     margin: 20px 0;
 }
 

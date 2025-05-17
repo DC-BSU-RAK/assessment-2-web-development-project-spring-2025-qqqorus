@@ -312,7 +312,7 @@ div {
 
 /* Leaderboard Preview */
 .leaderboard-preview {
-    background: white;
+    background: radial-gradient(#ffffffab 0%, #ffffffab 50%, #b9ffe6 75%, #85f1cb 100%);
     border-radius: 20px;
     padding: 25px;
     margin: 20px auto;
@@ -397,7 +397,7 @@ div {
 
 /* Upcoming Events */
 .upcoming-events {
-    background: white;
+    background: radial-gradient(#ffffffab 0%, #ffffffab 50%, #b9ffe6 75%, #85f1cb 100%);
     border-radius: 20px;
     padding: 20px;
     margin: 20px auto;
